@@ -1533,6 +1533,8 @@ class Logger(Filterer):
         c = self
         found = 0
         while c:
+            if c is root and not len(c.handlers):
+                basicConfig()
             for hdlr in c.handlers:
                 found = found + 1
                 if record.levelno >= hdlr.level:
