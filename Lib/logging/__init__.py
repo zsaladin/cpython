@@ -1892,8 +1892,6 @@ def critical(msg, *args, **kwargs):
     has no handlers, call basicConfig() to add a console handler with a
     pre-defined format.
     """
-    if len(root.handlers) == 0:
-        basicConfig()
     root.critical(msg, *args, **kwargs)
 
 fatal = critical
@@ -1904,8 +1902,6 @@ def error(msg, *args, **kwargs):
     no handlers, call basicConfig() to add a console handler with a pre-defined
     format.
     """
-    if len(root.handlers) == 0:
-        basicConfig()
     root.error(msg, *args, **kwargs)
 
 def exception(msg, *args, exc_info=True, **kwargs):
@@ -1922,8 +1918,6 @@ def warning(msg, *args, **kwargs):
     no handlers, call basicConfig() to add a console handler with a pre-defined
     format.
     """
-    if len(root.handlers) == 0:
-        basicConfig()
     root.warning(msg, *args, **kwargs)
 
 def warn(msg, *args, **kwargs):
@@ -1937,8 +1931,6 @@ def info(msg, *args, **kwargs):
     no handlers, call basicConfig() to add a console handler with a pre-defined
     format.
     """
-    if len(root.handlers) == 0:
-        basicConfig()
     root.info(msg, *args, **kwargs)
 
 def debug(msg, *args, **kwargs):
@@ -1947,8 +1939,6 @@ def debug(msg, *args, **kwargs):
     no handlers, call basicConfig() to add a console handler with a pre-defined
     format.
     """
-    if len(root.handlers) == 0:
-        basicConfig()
     root.debug(msg, *args, **kwargs)
 
 def log(level, msg, *args, **kwargs):
@@ -1957,8 +1947,6 @@ def log(level, msg, *args, **kwargs):
     the logger has no handlers, call basicConfig() to add a console handler
     with a pre-defined format.
     """
-    if len(root.handlers) == 0:
-        basicConfig()
     root.log(level, msg, *args, **kwargs)
 
 def disable(level=CRITICAL):
